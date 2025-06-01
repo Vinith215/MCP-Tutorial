@@ -1,8 +1,11 @@
 📌 What is MCP?
 
 MCP (Model Context Protocol) is a system that allows AI to interact with external tools and fetch information. MCP servers can:
+
 ✅ Store data (like files or API responses)
+
 ✅ Run tools (functions that AI can execute)
+
 ✅ Use prompts (predefined templates for tasks)
 
 📌 Installing Claude for Desktop
@@ -89,7 +92,9 @@ Add this configuration inside the file:
 📌 Testing the MCP Server
 
 Let’s test it out! In Claude, ask: 
+
 ✅ Run the command ls in my workspace. 
+
 ✅ Execute echo Hello World.
 
 Claude will send the command to our server, which will execute it and return the response.
