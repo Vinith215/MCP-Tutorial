@@ -1,55 +1,60 @@
-**What is MCP?**
+📌 What is MCP?
 
- MCP (Model Context Protocol) is a system that allows AI to interact with external tools and fetch information. 
-MCP servers can: 
-✅ Store data (like files or API responses) 
-✅ Run tools (functions that AI can execute) 
+MCP (Model Context Protocol) is a system that allows AI to interact with external tools and fetch information. MCP servers can:
+✅ Store data (like files or API responses)
+✅ Run tools (functions that AI can execute)
 ✅ Use prompts (predefined templates for tasks)
 
-**Installing Claude for Desktop **
+📌 Installing Claude for Desktop
+
 First, install Claude for Desktop from Claude’s website. It allows us to test MCP integrations easily.
 
-**Setting Up Python and the Right Tools **
-We need Python 3.10 or higher and a tool called uv, which is a fast package manager for Python. 
+📌 Setting Up Python and the Right Tools
 
-Step 1: Install uv
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+We need Python 3.10 or higher and a tool called uv, which is a fast package manager for Python.
+
+**Step 1: Install uv**
+
+windows : powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex".
 After installation, restart your terminal so uv is recognized.
 
 uv –version
 
-Step 2: Create the MCP Directory Structure
+**Step 2: Create the MCP Directory Structure**
+
 We’ll organize our project with the following structure:
 
-# Stores all MCP servers
-mkdir -p ~/mcp/servers/terminal_server 
+- Stores all MCP servers
+
+mkdir -p ~/mcp/servers/terminal_server. 
 Here mcp is the root directory and inside this their servers and might make multiple servers and the current server is terminal_server.
 
-# Create a Workspace Directory	
-mkdir -p ~/mcp/workspace 
+- Create a Workspace Directory	
+
+mkdir -p ~/mcp/workspace. 
 In workspace directory all the work that claude desktop app does for us using our MCP server is done inside this workspace directory 
 
-# change to our terminal server directory
-cd ~/mcp/servers/terminal_server
+- change to our terminal server directory
+cd ~/mcp/servers/terminal_server. 
 Change to our terminal server directory So just to reiterate mcp will save everything related to mcp including our servers which will be inside the servers directory and there will be a dedicated workspace inside the workspace directory over here each server will have its own folder.
 
-Step 3: Set Up a Python Project inside terminal server
+**Step 3: Set Up a Python Project inside terminal server**
 
 uv init 
 
-Step 4: Set Up and Activate the Virtual Environment
+**Step 4: Set Up and Activate the Virtual Environment**
 
 uv venv
 
 .venv\Scripts\activate # Windows
 
-Step 5: Install Required Packages
+**Step 5: Install Required Packages**
 
-**uv add "mcp[cli]"**
+uv add "mcp[cli]"
 
 This installs the MCP package, which allows our server to communicate with Claude.
 
-**Building the MCP Server That Executes Terminal Commands
+**Building the MCP Server That Executes Terminal Commands**
 
 Step 1: Create the Server File
 
