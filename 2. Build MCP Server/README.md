@@ -35,7 +35,7 @@ mkdir -p ~/mcp/workspace.
 In workspace directory all the work that claude desktop app does for us using our MCP server is done inside this workspace directory 
 
 - change to our terminal server directory
-- 
+ 
 cd ~/mcp/servers/terminal_server. 
 Change to our terminal server directory So just to reiterate mcp will save everything related to mcp including our servers which will be inside the servers directory and there will be a dedicated workspace inside the workspace directory over here each server will have its own folder.
 
