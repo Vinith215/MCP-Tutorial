@@ -14,9 +14,13 @@ The client sends user queries to Gemini, allows Gemini to call external tools fr
 📌 Features
 
 ✅ Connects to an MCP server (Python or Node.js)
+
 ✅ Sends queries to Google Gemini AI
+
 ✅ Lets Gemini call external tools from the MCP server
+
 ✅ Executes MCP tool commands and returns the results
+
 ✅ Maintains conversation history, so Gemini remembers past queries
 
 📦 Installation
